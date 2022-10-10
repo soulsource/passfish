@@ -1,0 +1,98 @@
+{
+    "generate_automocks": true,
+    "cppFile": "src/Bindings.cpp",
+    "rust": {
+        "dir": "rust",
+        "interfaceModule": "interface",
+        "implementationModule": "implementation"
+    },
+    "objects": {
+        "PasswordMaker" : {
+            "type" : "Object",
+            "properties" : {
+                "i_say_sexy_things_to_myself_while_im_dancing" : {
+                    "type" : "bool",
+                    "write": true
+                },
+                "profiles" : {
+                    "type" : "Profiles"
+                },
+                "settings" : {
+                    "type" : "Settings"
+                },
+                "url" : {
+                    "type" : "QString",
+                    "write" : true
+                },
+                "used_text" : {
+                    "type" : "QString",
+                    "write" : true
+                },
+                "master_password" : {
+                    "type" : "QString",
+                    "write" : true
+                },
+                "generated_password" : {
+                    "type" : "QString"
+                },
+                "generator_state" : {
+                    "type" : "quint8"
+                }
+            },
+            "functions" : {
+                "store_settings" : {
+                    "return" : "bool",
+                    "arguments" : []
+                },
+                "profile_changed" : {
+                    "return": "void",
+                    "arguments" : []
+                }
+            }
+        },
+        "Settings" : {
+            "type" : "Object",
+            "properties" : {
+                "clear_generated_password_seconds" : { "type" : "quint32", "optional": true, "write" : true },
+                "clear_master_password_seconds" : { "type" : "quint32", "optional": true, "write" : true },
+                "hide_generated_password" : { "type" : "bool", "write" :true }
+            }
+        },
+        "Profiles" : {
+            "type" : "List",
+            "properties" : {
+                "current_profile" : {
+                    "type" : "quint32",
+                    "write" : true
+                },
+                "current_profile_name" : {
+                    "type" : "QString"
+                }
+            },
+            "itemProperties" : {
+                "name" : { "type" : "QString", "write" : true, "roles" : [[ "display", "edit"]] },
+                "use_leet" : { "type" : "quint8", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "leet_level" : { "type" : "quint8", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "hash_algorithm" : { "type" : "quint8", "write" : true, "roles" : [[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "use_protocol" : { "type" : "bool", "write" : true, "roles" : [[], [ "display", "edit"]] },
+                "use_subdomains" : { "type" : "bool", "write" : true, "roles" : [[],[], [ "display", "edit"]] },
+                "use_domain" : { "type" : "bool", "write" : true, "roles" : [[],[],[], [ "display", "edit"]] },
+                "use_port_path" : { "type" : "bool", "write" : true, "roles" : [[],[],[],[], [ "display", "edit"]] },
+                "use_user_info" : { "type" : "bool", "write" : true, "roles" : [[],[],[],[],[], [ "display", "edit"]] },
+                "use_undefined_as_protocol_fallback" : { "type" : "bool", "write" : true, "roles" : [[],[],[],[],[],[], [ "display", "edit"]] },
+                "password_length" : { "type" : "quint32", "write" : true, "roles" : [[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "username" : { "type" : "QString", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "modifier" : { "type" : "QString", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "characters" : { "type" : "QString", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "prefix" : { "type" : "QString", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] },
+                "suffix" : { "type" : "QString", "write" : true, "roles" : [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[], [ "display", "edit"]] }
+            },
+            "functions" : {
+                "store" : {
+                    "return" : "bool",
+                    "arguments" : []
+                }
+            }
+        }
+    }
+}

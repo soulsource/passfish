@@ -1,0 +1,11 @@
+[package]
+name = "passwordmaker_macros"
+version = "1.0.0"
+
+[dependencies]
+syn = "1.0"
+quote = "1.0"
+
+[lib]
+name = "passwordmaker_macros"
+proc-macro = true

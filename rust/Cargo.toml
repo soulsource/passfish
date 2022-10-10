@@ -1,0 +1,23 @@
+[package]
+name = "passfish"
+version = "1.0.0"
+edition = "2018"
+
+[dependencies]
+libc = "0.2"
+serde = { version = "1.0", features = ["derive", "rc"] }
+toml = "0.5"
+dirs = "4.0"
+unicode-segmentation = "1.10.0"
+mockall_double = "0.2"
+ripemd = {version = "0.1.3", features = ["std"] }
+passwordmaker_macros = { path = "../rust_macro" }
+passwordmaker-rs = { git = "https://github.com/soulsource/passwordmaker-rs.git" }
+
+[dev-dependencies]
+mockall = "0.11"
+rust_testhelper = { path = "../rust_testhelper" }
+
+[lib]
+name = "passfish"
+crate-type = ["cdylib"]

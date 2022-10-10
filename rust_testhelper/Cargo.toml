@@ -1,0 +1,10 @@
+[package]
+name = "rust_testhelper"
+version = "0.1.0"
+description = "Helper for compiling and linking pwm_qhash.cpp during cargo test."
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+cc = "1.0"

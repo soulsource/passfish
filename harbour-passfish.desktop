@@ -1,0 +1,21 @@
+[Desktop Entry]
+Type=Application
+Icon=harbour-passfish
+Exec=harbour-passfish
+Name=PassFish
+
+#commented out because it causes troubles on SFOS 3.4
+X-Nemo-Application-Type=silica-qt5
+#X-Nemo-Application-Type=generic
+
+# translation example:
+# your app name in German locale (de)
+#
+# Remember to comment out the following line, if you do not want to use
+# a different app name in German locale (de).
+#Name[de]=PassFish
+
+[X-Sailjail]
+Permissions=
+OrganizationName=info.grois
+ApplicationName=harbour-passfish

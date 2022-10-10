@@ -1,0 +1,9 @@
+/rust/target
+/rust_macro/target
+/rust_testhelper/target
+*~
+*.swp
+CMakeLists.txt.user
+passwordmaker-javascript-2.5.html
+*.pdf
+notes
