@@ -120,6 +120,7 @@ Page {
                 inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
 
                 label: qsTr("Used Text")
+                hideLabelOnEmptyField: passwordmaker.used_text === ""
                 onFocusChanged: if(focus) text = passwordmaker.used_text
                 onPlaceholderTextChanged: if(!focus) text = ""
                 placeholderText: passwordmaker.used_text === "" ? qsTr("Used Text") : passwordmaker.used_text
@@ -177,6 +178,8 @@ Page {
                     onFocusChanged: if(focus) text = passwordmaker.generated_password; else text = "";
                     placeholderColor: color
 
+                    /*
+                    //Commented out for now. This is anyhow never visible, and causes log spam on Sailfish 3.
                     BusyIndicator {
                         id: busy
                         parent: null
@@ -190,6 +193,7 @@ Page {
                             rightItem: busy
                         }
                     }
+                    */
                 }
                 IconButton{
                     id: copyToClipboard

@@ -149,7 +149,7 @@
     </message>
     <message>
         <source>Pass Ready</source>
-        <translation>Pass Bereit</translation>
+        <translation>Passwort Bereit</translation>
     </message>
     <message>
         <source>Input Needed</source>

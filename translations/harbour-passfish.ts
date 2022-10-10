@@ -142,7 +142,7 @@
     </message>
     <message>
         <source>Pass Ready</source>
-        <translation>Pass Ready</translation>
+        <translation>Password Ready</translation>
     </message>
     <message>
         <source>Input Needed</source>

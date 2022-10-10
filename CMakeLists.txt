@@ -70,6 +70,13 @@ add_custom_command(
 )
 add_custom_target(rust_target DEPENDS "${RUST_LIB}")
 
+add_custom_command(
+    OUTPUT translations/harbour-passfish.qm translations/harbour-passfish-de.qm
+    COMMAND lrelease translations/harbour-passfish.ts translations/harbour-passfish-de.ts
+    WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
+)
+add_custom_target(translations_target DEPENDS translations/harbour-passfish.qm translations/harbour-passfish-de.qm)
+
 add_executable(
     harbour-passfish
     src/PassFish.cpp
@@ -77,7 +84,7 @@ add_executable(
     src/pwm_qhash.cpp
     src/GraphemeCountValidator.cpp
 )
-add_dependencies(harbour-passfish rust_target)
+add_dependencies(harbour-passfish rust_target translations_target)
 target_compile_definitions(harbour-passfish PRIVATE
     $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>
 )
