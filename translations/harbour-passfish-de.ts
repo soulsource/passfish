@@ -157,19 +157,19 @@
     </message>
     <message>
         <source>Used text:</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwendeter Text:</translation>
     </message>
     <message>
         <source>Status:</source>
-        <translation type="unfinished"></translation>
+        <translation>Status:</translation>
     </message>
     <message>
         <source>Password ready</source>
-        <translation type="unfinished"></translation>
+        <translation>Password berechnet</translation>
     </message>
     <message>
         <source>Input needed</source>
-        <translation type="unfinished"></translation>
+        <translation>Input benötigt</translation>
     </message>
 </context>
 <context>
@@ -243,19 +243,19 @@
     </message>
     <message>
         <source>App settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmeinstellungen</translation>
     </message>
     <message>
         <source>Master password</source>
-        <translation type="unfinished"></translation>
+        <translation>Hauptschlüssel</translation>
     </message>
     <message>
         <source>Used text</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwendeter Text</translation>
     </message>
     <message>
         <source>Generated password</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiertes Passwort</translation>
     </message>
 </context>
 <context>
@@ -427,79 +427,79 @@
     </message>
     <message>
         <source>Edit profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil bearbeiten</translation>
     </message>
     <message>
         <source>Required field</source>
-        <translation type="unfinished"></translation>
+        <translation>Benötigtes Feld</translation>
     </message>
     <message>
         <source>Profile name</source>
-        <translation type="unfinished"></translation>
+        <translation>Profilname</translation>
     </message>
     <message>
         <source>URL parts to use</source>
-        <translation type="unfinished"></translation>
+        <translation>Zu nutzende Teile der URL</translation>
     </message>
     <message>
         <source>Protocol</source>
-        <translation type="unfinished"></translation>
+        <translation>Protokoll</translation>
     </message>
     <message>
         <source>Enable to mimic behaviour of JavaScript PasswordMaker Pro.</source>
-        <translation type="unfinished"></translation>
+        <translation>Aktiviere um das Verhalten an die JavaScript Edition von Passwordmaker anzugleichen.</translation>
     </message>
     <message>
         <source>Userinfo</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutzerdaten</translation>
     </message>
     <message>
         <source>Include userinfo (e.g &quot;jane_doe:12345&quot;)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Subomain(s)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nutze Nutzerdaten (z.B. &quot;jane_doe:12345&quot;)</translation>
     </message>
     <message>
         <source>Domain</source>
-        <translation type="unfinished"></translation>
+        <translation>Domain</translation>
     </message>
     <message>
         <source>Port and path</source>
-        <translation type="unfinished"></translation>
+        <translation>Port und Pfad</translation>
     </message>
     <message>
         <source>At least one URL part is required.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mindesteins ein Teil der URL muss genutzt werden.</translation>
     </message>
     <message>
         <source>Password generation settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Einstellungen zur Passwortgenerierung</translation>
     </message>
     <message>
         <source>Password length</source>
-        <translation type="unfinished"></translation>
+        <translation>Passwortlänge</translation>
     </message>
     <message>
         <source>Hash algorithm</source>
-        <translation type="unfinished"></translation>
+        <translation>Hash-Algorithmus</translation>
     </message>
     <message>
         <source>Use l33t</source>
-        <translation type="unfinished"></translation>
+        <translation>Verwende L33t</translation>
     </message>
     <message>
         <source>Leet level</source>
-        <translation type="unfinished"></translation>
+        <translation>Leet-Stärke</translation>
     </message>
     <message>
         <source>Default characters</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard-Zeichenliste</translation>
     </message>
     <message>
         <source>Characters preset</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeichenlistenvorlage</translation>
+    </message>
+    <message>
+        <source>Subdomain(s)</source>
+        <translation>Subdomain(s)</translation>
     </message>
 </context>
 <context>
@@ -526,11 +526,11 @@
     </message>
     <message>
         <source>Add profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Neues Profil</translation>
     </message>
     <message>
         <source>Select/edit profiles</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil Auswählen/Bearbeiten</translation>
     </message>
 </context>
 <context>
@@ -576,19 +576,19 @@
     </message>
     <message>
         <source>App settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmeinstellungen</translation>
     </message>
     <message>
         <source>Hide generated password</source>
-        <translation type="unfinished"></translation>
+        <translation>Generiertes Passwort verstecken</translation>
     </message>
     <message>
         <source>Auto-clear generated password timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeit bis das generierte Passwort gelöscht wird</translation>
     </message>
     <message>
         <source>Auto-clear master password timeout</source>
-        <translation type="unfinished"></translation>
+        <translation>Zeit bis der Hauptschlüssel gelöscht wird</translation>
     </message>
 </context>
 </TS>

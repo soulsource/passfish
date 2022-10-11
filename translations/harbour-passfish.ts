@@ -233,7 +233,7 @@
     </message>
     <message>
         <location filename="../qml/pages/ProfileEditor.qml" line="127"/>
-        <source>Subomain(s)</source>
+        <source>Subdomain(s)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

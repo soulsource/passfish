@@ -124,7 +124,7 @@ Dialog {
                 }
                 TextSwitch {
                     id: subdomainField
-                    text: qsTr("Subomain(s)")
+                    text: qsTr("Subdomain(s)")
                     description: qsTr("Include URL subdomain(s) (e.g. \"www.\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
