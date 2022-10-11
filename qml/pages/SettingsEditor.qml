@@ -31,11 +31,11 @@ Dialog {
             width: parent.width
             bottomPadding: Theme.paddingLarge
             DialogHeader {
-                title: qsTr("Edit Settings")
+                title: qsTr("App settings")
             }
             TextSwitch {
                 id: hide_generated_passwordBox
-                text: qsTr("Hide Generated Password")
+                text: qsTr("Hide generated password")
                 palette.highlightColor : Theme.highlightColor
                 highlighted: down
             }
@@ -54,7 +54,7 @@ Dialog {
                 width: parent.width
                 valueText: value + " min"
                 visible: clear_generated_passwordBox.checked
-                label: qsTr("Auto-clear generated pass timeout")
+                label: qsTr("Auto-clear generated password timeout")
                 value: clear_generated_password/60 || 1
             }
             TextSwitch {
@@ -74,7 +74,7 @@ Dialog {
                 width: parent.width
                 valueText: sliderValue + " min"
                 visible: clear_master_passwordBox.checked
-                label: qsTr("Auto-clear master pass timeout")
+                label: qsTr("Auto-clear master password timeout")
                 value: clear_master_password/60 || 5
             }
             Label {

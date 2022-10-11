@@ -6,7 +6,7 @@ CoverBackground {
         x: Theme.paddingLarge
         y: Theme.paddingLarge
         width: parent.width - 2 * x
-        spacing: Theme.paddingLarge
+        spacing: Theme.paddingMedium
         Label {
             id: label
             text: qsTr("PassFish")
@@ -23,7 +23,7 @@ CoverBackground {
             Label {
                 id: urlLabel
                 color: Theme.highlightColor
-                text: qsTr("Used Text:")
+                text: qsTr("Used text:")
                 font.pixelSize: Theme.fontSizeSmall
                 truncationMode: TruncationMode.Fade
                 width: parent.width
@@ -42,10 +42,17 @@ CoverBackground {
             Label {
                 id: readyLabel
                 color: Theme.highlightColor
+                text: qsTr("Status:")
+                font.pixelSize: Theme.fontSizeSmall
+                truncationMode: TruncationMode.Fade
+                width: parent.width
+            }
+            Label {
+                id: ready
                 text: passwordmaker.generated_password.length > 0
                       && passwordmaker.generator_state === 0
-                      ? qsTr("Pass Ready")
-                      : qsTr("Input Needed")
+                      ? qsTr("Password ready")
+                      : qsTr("Input needed")
                 font.pixelSize: Theme.fontSizeSmall
                 truncationMode: TruncationMode.Fade
                 width: parent.width

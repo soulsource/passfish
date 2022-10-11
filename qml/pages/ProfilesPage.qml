@@ -18,7 +18,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Add Profile")
+                text: qsTr("Add profile")
                 onClicked: {
                     profilesView.model.insertRows(profilesView.model.rowCount(),1);
                     profilesView.store_profile_with_error_message();
@@ -26,7 +26,7 @@ Page {
             }
         }
         header: PageHeader {
-            title: qsTr("Select/Edit Profiles")
+            title: qsTr("Select/edit profiles")
         }
         delegate: ListItem {
             id: delegate

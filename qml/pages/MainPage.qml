@@ -35,7 +35,7 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("App Settings")
+                text: qsTr("App settings")
                 onClicked: {
                     var pg = pageStack.animatorPush(Qt.resolvedUrl("SettingsEditor.qml"),
                     {
@@ -103,8 +103,8 @@ Page {
 
                 text: passwordmaker.master_password
 
-                label: qsTr("Master Password")
-                placeholderText: qsTr("Master Password")
+                label: qsTr("Master password")
+                placeholderText: qsTr("Master password")
                 EnterKey.iconSource: "image://theme/icon-m-enter-close"
                 EnterKey.onClicked: focus = false
                 Binding {
@@ -119,11 +119,11 @@ Page {
 
                 inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhNoAutoUppercase
 
-                label: qsTr("Used Text")
+                label: qsTr("Used text")
                 hideLabelOnEmptyField: passwordmaker.used_text === ""
                 onFocusChanged: if(focus) text = passwordmaker.used_text
                 onPlaceholderTextChanged: if(!focus) text = ""
-                placeholderText: passwordmaker.used_text === "" ? qsTr("Used Text") : passwordmaker.used_text
+                placeholderText: passwordmaker.used_text === "" ? qsTr("Used text") : passwordmaker.used_text
                 EnterKey.iconSource: "image://theme/icon-m-enter-close"
                 EnterKey.onClicked: focus = false
                 Binding {
@@ -167,7 +167,7 @@ Page {
                     showEchoModeToggle: passwordmaker.settings.hide_generated_password
                     readOnly: true
                     focusOnClick: true
-                    label: qsTr("Generated Password")
+                    label: qsTr("Generated password")
                     hideLabelOnEmptyField: false
                     placeholderText:
                         password_text_from_generator_state(

@@ -53,7 +53,7 @@ Dialog {
             width: parent.width
             bottomPadding: Theme.paddingLarge
             DialogHeader {
-                title: qsTr("Edit Profile")
+                title: qsTr("Edit profile")
             }
             TextField {
                 id: profileNameField
@@ -62,14 +62,14 @@ Dialog {
 
                 //description doesn't work on Sailfish 3. Use label instead if unavailable.
                 readonly property bool descriptionAvailable : typeof(description) !== "undefined"
-                label: !descriptionAvailable && errorHighlight ? qsTr("Required Field") : qsTr("Profile Name")
+                label: !descriptionAvailable && errorHighlight ? qsTr("Required field") : qsTr("Profile name")
                 hideLabelOnEmptyField: descriptionAvailable
-                placeholderText: qsTr("Profile Name")
+                placeholderText: qsTr("Profile name")
 
                 Binding {
                     target: profileNameField
                     property: "description"
-                    value: profileNameField.errorHighlight ? qsTr("Required Field") : ""
+                    value: profileNameField.errorHighlight ? qsTr("Required field") : ""
                     when: profileNameField.descriptionAvailable
                 }
 
@@ -90,10 +90,19 @@ Dialog {
                 bottomPadding: Theme.paddingLarge
 
                 property bool anySelected : (useProtocol || useSubdomain || useDomain || usePortPath || useUserInfo)
+                Label {
+                    id: urlPartLabel
+                    text: qsTr("URL parts to use")
+                    color: Theme.highlightColor
+
+                    x: Theme.paddingLarge
+                    width: parent.width - 2*Theme.paddingSmall
+                    bottomPadding: Theme.paddingSmall
+                }
 
                 TextSwitch {
                     id: protocolField
-                    text: qsTr("Use Protocol")
+                    text: qsTr("Protocol")
                     description: qsTr("Include URL protocol (e.g. \"http://\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
@@ -102,34 +111,34 @@ Dialog {
                     id: useDefaultFallbackForProtocolField
                     visible: protocolField.checked
                     text: qsTr("Use \"undefined\" if protocol is missing")
-                    description: qsTr("Enable to mimic weird behaviour of PasswordMaker Pro.")
+                    description: qsTr("Enable to mimic behaviour of JavaScript PasswordMaker Pro.")
                     palette.highlightColor : down ? Theme.highlightColor : Theme.errorColor
                     highlighted: down
                 }
                 TextSwitch {
                     id: userInfoField
-                    text: qsTr("Use Userinfo")
-                    description: qsTr("Include userinfo (e.g \"jane_doe:12345\"")
+                    text: qsTr("Userinfo")
+                    description: qsTr("Include userinfo (e.g \"jane_doe:12345\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
                 }
                 TextSwitch {
                     id: subdomainField
-                    text: qsTr("Use Subomain(s)")
+                    text: qsTr("Subomain(s)")
                     description: qsTr("Include URL subdomain(s) (e.g. \"www.\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
                 }
                 TextSwitch {
                     id: domainField
-                    text: qsTr("Use Domain")
+                    text: qsTr("Domain")
                     description: qsTr("Include URL domain (e.g. \"example.com\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
                 }
                 TextSwitch {
                     id: portPathField
-                    text: qsTr("Use Port/Path")
+                    text: qsTr("Port and path")
                     description: qsTr("Include port and path (e.g \":8080/file\")")
                     palette.highlightColor : down || urlPartsColumn.anySelected ? Theme.highlightColor : Theme.errorColor
                     highlighted: down || !urlPartsColumn.anySelected
@@ -137,14 +146,28 @@ Dialog {
                 }
                 NoticeOptional {
                     id: urlNotice
-                    text: qsTr("At least one URL part required.")
+                    text: qsTr("At least one URL part is required.")
                     useNotificationFallback: false
                 }
+            }
+            Separator {
+                width: parent.width
+                horizontalAlignment:Qt.AlignHCenter
+                color: Theme.secondaryColor
             }
             Column {
                 width: parent.width
                 topPadding: Theme.paddingLarge
                 bottomPadding: Theme.paddingLarge
+                Label {
+                    id: generationSettingsLabel
+                    text: qsTr("Password generation settings")
+                    color: Theme.highlightColor
+
+                    x: Theme.paddingLarge
+                    width: parent.width - 2*Theme.paddingSmall
+                    bottomPadding: Theme.paddingSmall
+                }
                 Slider {
                     id: passwordLengthSlider
                     minimumValue: 1
@@ -152,11 +175,11 @@ Dialog {
                     stepSize: 1
                     width: parent.width
                     valueText : value
-                    label: qsTr("Password Length")
+                    label: qsTr("Password length")
                 }
                 ComboBox {
                     id: hashAlgorithmComboBox
-                    label: qsTr("Hash Algorithm")
+                    label: qsTr("Hash algorithm")
                     menu: ContextMenu {
                         MenuItem { text: "MD4" }
                         MenuItem { text: "HMAC-MD4" }
@@ -174,7 +197,7 @@ Dialog {
                 }
                 ComboBox {
                     id: useLeetComboBox
-                    label: qsTr("Use L33t")
+                    label: qsTr("Use l33t")
                     menu: ContextMenu {
                         MenuItem { text: qsTr("not at all") }
                         MenuItem { text: qsTr("before generating") }
@@ -190,7 +213,7 @@ Dialog {
                     width: parent.width
                     valueText: value
                     visible: useLeetComboBox.currentIndex > 0
-                    label: qsTr("Leet Level")
+                    label: qsTr("Leet level")
                 }
             }
             Column {
@@ -201,7 +224,7 @@ Dialog {
                 ListModel {
                     id: defaultCharacterValues
                     ListElement {
-                        name: qsTr("Default Characters")
+                        name: qsTr("Default characters")
                         chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789`~!@#$%^&*()_-+={}|[]\\:\";'<>?,./"
                         userFacing: true
                     }
@@ -252,7 +275,7 @@ Dialog {
                         value: defaultCharactersMenu.matchIndex(charactersField.text)
                     }
 
-                    label: qsTr("Characters Preset")
+                    label: qsTr("Characters preset")
                     menu: ContextMenu {
                         Repeater {
                             model: defaultCharacterValues
