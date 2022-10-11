@@ -60,6 +60,7 @@ add_custom_command(
   OUTPUT "${RUST_LIB}"
   COMMAND ${Cargo_EXECUTABLE} build ${RUST_BUILD_FLAG}
   DEPENDS rust/Cargo.toml
+          rust/Cargo.lock
           ${RustSources}
           rust/src/interface.rs
           rust_macro/Cargo.toml
