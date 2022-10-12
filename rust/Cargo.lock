@@ -240,7 +240,7 @@ dependencies = [
 [[package]]
 name = "passwordmaker-rs"
 version = "0.1.0"
-source = "git+https://github.com/soulsource/passwordmaker-rs.git?branch=main#7477436aa31c4d136d1fb565e6273faec64e7ec7"
+source = "git+https://github.com/soulsource/passwordmaker-rs.git?branch=main#584b82f7b53ca72fb6783d79b4eba03a6eec1730"
 dependencies = [
  "unicode-segmentation",
 ]
