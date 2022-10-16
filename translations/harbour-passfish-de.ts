@@ -165,7 +165,7 @@
     </message>
     <message>
         <source>Password ready</source>
-        <translation>Password berechnet</translation>
+        <translation>Password bereit</translation>
     </message>
     <message>
         <source>Input needed</source>
@@ -256,6 +256,10 @@
     <message>
         <source>Generated password</source>
         <translation>Generiertes Passwort</translation>
+    </message>
+    <message>
+        <source>Copied</source>
+        <translation>Kopiert</translation>
     </message>
 </context>
 <context>

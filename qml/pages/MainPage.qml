@@ -199,7 +199,10 @@ Page {
                     id: copyToClipboard
                     enabled: passwordmaker.generator_state === 0 && passwordmaker.generated_password.length > 0
                     icon.source: "image://theme/icon-m-clipboard"
-                    onClicked: Clipboard.text = passwordmaker.generated_password;
+                    onClicked: {
+                        Clipboard.text = passwordmaker.generated_password;
+                        copiedNotice.show();
+                    }
                 }
             }
             Timer {
@@ -225,6 +228,11 @@ Page {
             id: storeFailureNotice
             text: qsTr("Saving settings failed.")
             useNotificationFallback: true
+        }
+        NoticeOptional {
+            id: copiedNotice
+            text: qsTr("Copied")
+            useNotificationFallback: false
         }
 
         Binding{

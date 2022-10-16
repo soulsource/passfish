@@ -167,8 +167,13 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="226"/>
+        <location filename="../qml/pages/MainPage.qml" line="229"/>
         <source>Saving settings failed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="234"/>
+        <source>Copied</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
