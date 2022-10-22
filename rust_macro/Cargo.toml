@@ -1,6 +1,6 @@
 [package]
 name = "passwordmaker_macros"
-version = "1.0.0"
+version = "0.1.0"
 
 [dependencies]
 syn = "1.0"
