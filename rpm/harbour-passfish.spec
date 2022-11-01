@@ -7,7 +7,7 @@ Name:       harbour-passfish
 
 # >> macros
 %define __provides_exclude_from ^%{_datadir}/.*$
-%define __requires_exclude ^libpassfish.so$
+%define __requires_exclude ^libpassfish.*$
 # << macros
 
 Summary:    PassFish
