@@ -221,7 +221,7 @@ dependencies = [
 
 [[package]]
 name = "passfish"
-version = "0.1.0"
+version = "0.2.0"
 dependencies = [
  "dirs",
  "libc",
@@ -239,9 +239,9 @@ dependencies = [
 
 [[package]]
 name = "passwordmaker-rs"
-version = "0.1.0"
+version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ff3d133eeb9874b7b21cf1c8fea98176bca24ff43393e853a8aa8c97dd071f36"
+checksum = "ab27353d7249f2852eacac439f8f1020d79dc650e1b04eed51ada6923dbc6645"
 dependencies = [
  "unicode-segmentation",
 ]

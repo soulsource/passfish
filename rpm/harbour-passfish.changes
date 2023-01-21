@@ -1,0 +1,23 @@
+# Rename this file as PassFish.changes to include changelog
+# entries in your RPM file.
+#
+# Add new changelog entries following the format below.
+# Add newest entries to the top of the list.
+# Separate entries from eachother with a blank line.
+#
+# Alternatively, if your changelog is automatically generated (e.g. with
+# the git-change-log command provided with Sailfish OS SDK), create a
+# PassFish.changes.run script to let mb2 run the required commands for you.
+
+# * date Author's Name <author's email> version-release
+# - Summary of changes
+
+* Fri Jan 20 2023 Andreas Grois <andi@grois.info> 0.2.0
+- Update to passwordmaker-rs version 0.2, what means the following:
+- A ton of new automated tests make bugs less likely
+- The performance of profiles that don't use leet after generating was improved
+- The performance of HMAC profiles was improved
+- The overall quality of the passwordmaker-rs code has improved.
+
+* Tue Nov 1 2022 Andreas Grois <andi@grois.info> 0.1.0
+- Initial release
